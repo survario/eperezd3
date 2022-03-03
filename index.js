@@ -14,13 +14,16 @@ const server = app.listen(PORT, () => {
 app.get('/productos', async (req, res) => {
     const productos = await contenedor.getAll()
     //console.log(productos)
-    res.send(JSON.stringify(productos))
+    res.type('json')
+    res.send(JSON.stringify(productos, null, 2))
 })
 
 //Creamos la Ruta /productoRandom
 app.get('/productoRandom', async (req, res) => {
     const producto = await contenedor.getRandom()
-    res.json(producto)
+    res.type('json')
+    res.send(JSON.stringify(producto, null, 2))
+    //res.json(producto)
 })
 
 //
