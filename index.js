@@ -17,7 +17,7 @@ app.get('/productos', async (req, res) => {
     res.send(JSON.stringify(productos))
 })
 
-//Creamos la Rura /productoRandom
+//Creamos la Ruta /productoRandom
 app.get('/productoRandom', async (req, res) => {
     const producto = await contenedor.getRandom()
     res.json(producto)
