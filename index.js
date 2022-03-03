@@ -26,7 +26,16 @@ app.get('/productoRandom', async (req, res) => {
     //res.json(producto)
 })
 
-//
+//Creamos una Ruta de Inicio 
+app.get('/', (req, res) => {
+    res.send(`<h1 style = 'color:green;'> Desafío 3 - Emmanuel Pérez</h1>
+    <h3 style = 'color:blue;'> Rutas implementadas: </h3>
+    <h3> /productos </h3>
+    <h3> /productoRandom </h3>
+    <h3 style = 'color:red;'> URLs en glitch.com: </h3>
+    <h3>https://florentine-materialistic-moat.glitch.me/productos </h3>
+    <h3>https://florentine-materialistic-moat.glitch.me/productoRandom </h3>`)
+})
 
 //Creamos instancia contenedor perteneciente a clase Contenedor
 const contenedor = new Contenedor('./productos.txt')
