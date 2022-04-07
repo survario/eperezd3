@@ -49,7 +49,7 @@ class Contenedor {
         const products = this.getAllSync()
         let product = products.find(product => id === product.id)
         product = {}
-        fs.writeFileSyn('./productos.txt', JSON.stringify(product))
+        fs.writeFileSync('./productos.txt', JSON.stringify(product))
         } catch (e) {
             
         }

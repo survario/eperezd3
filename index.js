@@ -62,4 +62,4 @@ const llenar = async () => {
     })
 } 
 
-//llenar()
+llenar()
